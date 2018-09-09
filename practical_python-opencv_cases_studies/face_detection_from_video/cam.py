@@ -3,14 +3,17 @@ from utilities import imutils
 import cv2
 
 # Define paths
-video_path = 'video/adrian_face.mov'
+video_path = 'video/'
 cascade_path = 'cascades/haarcascade_frontalface_default.xml'
 
 # Construct the face detector
 detector = FaceDetector(cascade_path)
 
 # Load the video
-camera = cv2.VideoCapture(video_path)
+if video_path:
+    camera=cv2.VideoCapture(0)
+else:
+    camera = cv2.VideoCapture(video_path)
 
 while True:
     # Grab the current frame
