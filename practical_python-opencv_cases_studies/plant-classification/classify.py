@@ -1,7 +1,7 @@
 from utilities.rgbhistogram import RGBHistogram
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
 import numpy as np
 import glob
@@ -70,5 +70,8 @@ for i in np.random.choice(np.arange(0, len(image_paths)), 10):
 	flower = le.inverse_transform(model.predict([features]))[0]
 	print(image_path)
 	print("Prediction: {}".format(flower.upper()))
+	text_font=cv2.FONT_HERSHEY_DUPLEX
+	prediction_text="Prediction: {}".format(flower.upper())
+	cv2.putText(image,prediction_text,(10,60),text_font,1,(0,255,255))
 	cv2.imshow("image", image)
 	cv2.waitKey(0)
