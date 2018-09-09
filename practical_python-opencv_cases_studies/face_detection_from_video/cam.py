@@ -10,7 +10,7 @@ cascade_path = 'cascades/haarcascade_frontalface_default.xml'
 detector = FaceDetector(cascade_path)
 
 # Load the video
-if video_path:
+if video_path=='video/':
     camera=cv2.VideoCapture(0)
 else:
     camera = cv2.VideoCapture(video_path)
