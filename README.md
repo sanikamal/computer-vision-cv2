@@ -13,5 +13,12 @@ Edited code examples from the book 'Practical Python and OpenCV - Case Studies (
 5. Eye Tracking
 6. Handwriting Recognition with HOG
 7. Plant Classification
-8. Building an Amazon.com Cover Search
+8. Cover Search
 9. Conclusion
+
+## OpenCV with Python Blueprints
+## Description
+Edited code examples from the book 'OpenCV with Python Blueprints'.
+
+## Table of Contents
+1. Filters
