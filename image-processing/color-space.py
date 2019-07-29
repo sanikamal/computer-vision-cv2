@@ -14,10 +14,6 @@ print (hsv_green)
 # Object Tracking
 
 # . In HSV, it is more easier to represent a color than RGB color-space.
-
-import cv2
-import numpy as np
-
 cap = cv2.VideoCapture(0)
 
 while(1):

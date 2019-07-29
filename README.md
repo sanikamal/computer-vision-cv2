@@ -12,4 +12,3 @@ The library has more than 2500 optimized algorithms, which includes a comprehens
 6. Handwriting Recognition with HOG
 7. Plant Classification
 8. Cover Search
-9.

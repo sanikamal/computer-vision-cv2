@@ -3,7 +3,7 @@
 # python skindetector.py --video video/skin_example.mov
 
 # import the necessary packages
-from pyimagesearch import imutils
+from ruaai import imutils
 import numpy as np
 import argparse
 import cv2
