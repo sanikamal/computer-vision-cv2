@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 
 BLUE = [255,0,0]
 
-img1 = cv2.imread('me_friends_teacher.jpg')
+img1 = cv2.imread('../images/me_friends_teacher.jpg')
 
 replicate = cv2.copyMakeBorder(img1,10,10,10,10,cv2.BORDER_REPLICATE)
 reflect = cv2.copyMakeBorder(img1,10,10,10,10,cv2.BORDER_REFLECT)

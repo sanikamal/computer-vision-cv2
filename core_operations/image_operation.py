@@ -3,7 +3,7 @@ import cv2
 
 # Accessing and Modifying pixel values
 
-img=cv2.imread('me_friends_teacher.jpg')
+img=cv2.imread('../images/me_friends_teacher.jpg')
 px = img[100,100]
 print(px)
 # accessing only blue pixel
