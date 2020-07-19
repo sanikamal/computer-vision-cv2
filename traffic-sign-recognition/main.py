@@ -1,9 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""OpenCV with Python Blueprints
-    Chapter 6: Learning to Recognize Traffic Signs
-
+"""Recognize Traffic Signs
     Traffic sign recognition using support vector machines (SVMs).
     SVMs are extended for multi-class classification using the "one-vs-one"
     and "one-vs-all" strategies.
@@ -15,9 +10,6 @@ import matplotlib.pyplot as plt
 from datasets import gtsrb
 from classifiers import MultiClassSVM
 
-__author__ = "Michael Beyeler"
-__license__ = "GNU GPL 3.0 or later"
-
 
 def main():
     strategies = ['one-vs-one', 'one-vs-all']
@@ -27,7 +19,7 @@ def main():
     recall = np.zeros((2, len(features)))
 
     for f in xrange(len(features)):
-        print "feature", features[f]
+        print ("feature", features[f])
         (X_train, y_train), (X_test, y_test) = gtsrb.load_data(
             "datasets/gtsrb_training",
             feature=features[f],
@@ -43,7 +35,7 @@ def main():
         # find all class labels
         labels = np.unique(np.hstack((y_train, y_test)))
 
-        for s in xrange(len(strategies)):
+        for s in range(len(strategies)):
             print " - strategy", strategies[s]
             # set up SVMs
             MCS = MultiClassSVM(len(labels), strategies[s])

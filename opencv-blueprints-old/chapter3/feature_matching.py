@@ -1,13 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """A module containing an algorithm for feature matching"""
 
 import numpy as np
 import cv2
-
-__author__ = "Michael Beyeler"
-__license__ = "GNU GPL 3.0 or later"
 
 
 class FeatureMatching:

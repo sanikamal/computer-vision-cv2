@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """A module that contains various classifiers"""
 
 import cv2
@@ -8,9 +5,6 @@ import numpy as np
 
 from abc import ABCMeta, abstractmethod
 from matplotlib import pyplot as plt
-
-__author__ = "Michael Beyeler"
-__license__ = "GNU GPL 3.0 or later"
 
 
 class Classifier:
