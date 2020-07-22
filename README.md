@@ -13,4 +13,4 @@ The library has more than 2500 optimized algorithms, which includes a comprehens
 7. Plant Classification
 8. Cover Search
 9. Document Scanner
-
+10. Optical Character Recognition
