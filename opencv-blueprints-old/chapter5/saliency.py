@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """A module to generate a saliency map from an RGB image
 
     This code is based on the approach described in:
@@ -59,7 +56,7 @@ class Saliency:
             else:
                 # multiple channels: consider each channel independently
                 sal = np.zeros_like(self.frame_small).astype(np.float32)
-                for c in xrange(self.frame_small.shape[2]):
+                for c in range(self.frame_small.shape[2]):
                     small = self.frame_small[:, :, c]
                     sal[:, :, c] = self._get_channel_sal_magn(small)
 

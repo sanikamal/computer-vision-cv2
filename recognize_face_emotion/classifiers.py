@@ -6,10 +6,6 @@ import numpy as np
 from abc import ABCMeta, abstractmethod
 from matplotlib import pyplot as plt
 
-__author__ = "Michael Beyeler"
-__license__ = "GNU GPL 3.0 or later"
-
-
 class Classifier:
     """
         Abstract base class for all classifiers
@@ -70,7 +66,7 @@ class Classifier:
 
             # consider each class separately
             prec = np.zeros(self.num_classes)
-            for c in xrange(self.num_classes):
+            for c in range(self.num_classes):
                 # true positives: label is c, classifier predicted c
                 tp = conf[c, c]
 
@@ -83,7 +79,7 @@ class Classifier:
         elif self.mode == "one-vs-all":
             # consider each class separately
             prec = np.zeros(self.num_classes)
-            for c in xrange(self.num_classes):
+            for c in range(self.num_classes):
                 # true positives: label is c, classifier predicted c
                 tp = np.count_nonzero((y_test == c) * (y_hat == c))
 
@@ -112,7 +108,7 @@ class Classifier:
 
             # consider each class separately
             recall = np.zeros(self.num_classes)
-            for c in xrange(self.num_classes):
+            for c in range(self.num_classes):
                 # true positives: label is c, classifier predicted c
                 tp = conf[c, c]
 
@@ -123,7 +119,7 @@ class Classifier:
         elif self.mode == "one-vs-all":
             # consider each class separately
             recall = np.zeros(self.num_classes)
-            for c in xrange(self.num_classes):
+            for c in range(self.num_classes):
                 # true positives: label is c, classifier predicted c
                 tp = np.count_nonzero((y_test == c) * (y_hat == c))
 
@@ -149,10 +145,10 @@ class Classifier:
         """
         y_hat = np.argmax(Y_vote, axis=1)
         conf = np.zeros((self.num_classes, self.num_classes)).astype(np.int32)
-        for c_true in xrange(self.num_classes):
+        for c_true in range(self.num_classes):
             # looking at all samples of a given class, c_true
             # how many were classified as c_true? how many as others?
-            for c_pred in xrange(self.num_classes):
+            for c_pred in range(self.num_classes):
                 y_this = np.where((y_test == c_true) * (y_hat == c_pred))
                 conf[c_pred, c_true] = np.count_nonzero(y_this)
         return conf

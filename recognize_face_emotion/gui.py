@@ -9,9 +9,6 @@ import time
 import wx
 import cv2
 
-__author__ = "Michael Beyeler"
-__license__ = "GNU GPL 3.0 or later"
-
 
 class BaseLayout(wx.Frame):
     """Abstract base class for all layouts

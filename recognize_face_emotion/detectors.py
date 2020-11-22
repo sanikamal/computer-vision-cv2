@@ -1,13 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """A module that contains various detectors"""
 
 import cv2
 import numpy as np
-
-__author__ = "Michael Beyeler"
-__license__ = "GNU GPL 3.0 or later"
 
 
 class FaceDetector:
@@ -36,15 +30,15 @@ class FaceDetector:
         # load pre-trained cascades
         self.face_casc = cv2.CascadeClassifier(face_casc)
         if self.face_casc.empty():
-            print 'Warning: Could not load face cascade:', face_casc
+            print ('Warning: Could not load face cascade:', face_casc)
             raise SystemExit
         self.left_eye_casc = cv2.CascadeClassifier(left_eye_casc)
         if self.left_eye_casc.empty():
-            print 'Warning: Could not load left eye cascade:', left_eye_casc
+            print ('Warning: Could not load left eye cascade:', left_eye_casc)
             raise SystemExit
         self.right_eye_casc = cv2.CascadeClassifier(right_eye_casc)
         if self.right_eye_casc.empty():
-            print 'Warning: Could not load right eye cascade:', right_eye_casc
+            print ('Warning: Could not load right eye cascade:', right_eye_casc)
             raise SystemExit
 
     def detect(self, frame):

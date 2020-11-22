@@ -1,5 +1,4 @@
-"""OpenCV with Python Blueprints
-    Chapter 7: Learning to Recognize Emotion in Faces
+"""Learning to Recognize Emotion in Faces
 
     An app that combines both face detection and face recognition, with a
     focus on recognizing emotional expressions in the detected faces.
@@ -22,15 +21,12 @@ import numpy as np
 import time
 import wx
 from os import path
-import cPickle as pickle
+import pickle as pickle
 
 from datasets import homebrew
 from detectors import FaceDetector
 from classifiers import MultiLayerPerceptron
 from gui import BaseLayout
-
-__author__ = "Michael Beyeler"
-__license__ = "GNU GPL 3.0 or later"
 
 
 class FaceLayout(BaseLayout):

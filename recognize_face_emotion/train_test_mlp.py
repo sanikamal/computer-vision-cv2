@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """A script to train and test a MLP classifier"""
 
 import cv2
@@ -8,9 +5,6 @@ import numpy as np
 
 from datasets import homebrew
 from classifiers import MultiLayerPerceptron
-
-__author__ = "Michael Beyeler"
-__license__ = "GNU GPL 3.0 or later"
 
 
 def main():
